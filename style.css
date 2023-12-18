@@ -1,0 +1,12 @@
+* {
+  display: flex;
+  flex-direction: row;
+  color: teal;
+}
+form {
+  margin: 0 auto;
+  width: 800px;
+  padding: 1em;
+  border: 1px solid #0a923e;
+  border-radius: 1em;
+}
