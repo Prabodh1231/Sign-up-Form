@@ -1,11 +1,64 @@
-body {
-  display: flex;
-  color: palevioletred;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: var(--txt);
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  color: rgb(86, 7, 33);
+}
+
+.form_section{
+ padding: 20px;
+}
+
+.header {
+  font-weight: bold;
+}
+
 form {
-  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
   width: 800px;
   padding: 1em;
   border: 1px solid #0a923e;
   border-radius: 1em;
+}
+
+input, label {
+  display:block;
+}
+
+.cover_image {
+  width: 40vw;
+  overflow: hidden; /* Ensure the image doesn't exceed the container */
+}
+
+.cover_image img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+button{
+display: inline-block;
+outline: none;
+cursor: pointer;
+font-size: 16px;
+line-height: 20px;
+font-weight: 600;
+border-radius: 8px;
+padding: 14px 24px;
+border: none;
+margin-bottom: 20px;
+transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+color: #fff;
 }
