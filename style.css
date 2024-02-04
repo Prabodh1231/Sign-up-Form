@@ -1,20 +1,23 @@
+/* Never add display: flex on the unversal selector it is bad. */
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  color: var(--txt);
+  font-family: Norse, sans-serif;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  color: rgb(86, 7, 33);
+  flex-flow: row wrap;
 }
 
 .form_section{
  padding: 20px;
+ width: min(850px, 90%);
+ min-width: 500px;
 }
 
 .header {
@@ -27,9 +30,9 @@ form {
   justify-content: center;
   gap: 40px;
   margin: 40px auto;
-  width: 800px;
+  width: min(800px, 95%);
   padding: 1em;
-  border: 1px solid #0a923e;
+  border: 1px solid rgb(215, 4, 102);
   border-radius: 1em;
 }
 
@@ -38,7 +41,7 @@ input, label {
 }
 
 .cover_image {
-  width: 40vw;
+  width: min(600px, 100%);
   overflow: hidden; /* Ensure the image doesn't exceed the container */
 }
 
