@@ -4,6 +4,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-size: large;
 }
 
 body {
@@ -14,12 +15,15 @@ body {
 }
 
 .form_section{
- padding: 20px;
- width: min(850px, 90%);
- min-width: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 700px;
 }
 
 .header {
+  padding-left: 20px;
+  padding-top: 50px;
   font-weight: bold;
 }
 
@@ -27,12 +31,17 @@ form {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  gap: 40px;
+  align-self: center;
+  padding: 20px;
+  width: 100%;
+  gap: 30px;
   margin: 40px auto;
-  width: min(800px, 95%);
-  padding: 1em;
-  border: 1px solid rgb(215, 4, 102);
-  border-radius: 1em;
+  background-color: hsla(30, 72%, 54%, 0.025);
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2), 0px -1px 5px rgba(0, 0, 0, 0.01);
+}
+
+label{
+  font-weight: bold;
 }
 
 input, label {
@@ -40,15 +49,20 @@ input, label {
   height: 3.5vh;
 }
 
+input:focus{
+  border: 4px solid rgba(255, 20, 145, 0.534);
+  box-shadow: 0px 3px 5px 3px rgba(190, 17, 106, 0.2), 0px -1px 5px rgba(0, 0, 0, 0.01);
+}
+
 .cover_image {
   position: relative;
-  width: min(600px, 100%);
+  width: min(500px, 100%);
   overflow: hidden; /* Ensure the image doesn't exceed the container */
 }
 
 .back-img {
-  width: 100%; /* Make the image fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: auto; /* Make the image fill the container */
+  height: 100vh; /* Maintain aspect ratio */
 }
 
 .wall {
@@ -57,17 +71,19 @@ input, label {
   justify-content: center;
   align-items: center;
   font-family: Norse, sans-serif;
-  background-color: hsla(259, 22%, 85%, 0.5);
+  background-color: hsla(30, 72%, 54%, 0.7);
   width: 100%;
-  top: 10%;
+  top: 15%;
   font-size: xx-large;
   height: 150px;
 }
 
 .over-img {
-  height: 125px;
-  top: 10%;
-  left: 5%;
+  height: 125px
+}
+
+.submit_section{
+  padding-left: 20px;
 }
 
 button{
@@ -84,4 +100,12 @@ margin-bottom: 20px;
 transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
 background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
 color: #fff;
+}
+
+button:hover{
+  background: linear-gradient(to right, rgb(230, 30, 203) 0%, rgb(227, 28, 187) 50%, rgb(194, 4, 215) 100%);
+}
+
+a{
+  text-decoration: none;
 }
