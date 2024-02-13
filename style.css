@@ -4,7 +4,6 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: Norse, sans-serif;
 }
 
 body {
@@ -37,17 +36,38 @@ form {
 }
 
 input, label {
-  display:block;
+  display: block;
+  height: 3.5vh;
 }
 
 .cover_image {
+  position: relative;
   width: min(600px, 100%);
   overflow: hidden; /* Ensure the image doesn't exceed the container */
 }
 
-.cover_image img {
+.back-img {
   width: 100%; /* Make the image fill the container */
   height: auto; /* Maintain aspect ratio */
+}
+
+.wall {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Norse, sans-serif;
+  background-color: hsla(259, 22%, 85%, 0.5);
+  width: 100%;
+  top: 10%;
+  font-size: xx-large;
+  height: 150px;
+}
+
+.over-img {
+  height: 125px;
+  top: 10%;
+  left: 5%;
 }
 
 button{
