@@ -11,58 +11,31 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
 }
 
-.form_section{
-  flex: 1;
+.Main_Container {
   display: flex;
-  flex-direction: column;
-  min-width: 700px;
-}
-
-.header {
-  padding-left: 20px;
-  padding-top: 50px;
-  font-weight: bold;
-}
-
-form {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-self: center;
-  padding: 20px;
   width: 100%;
-  gap: 30px;
-  margin: 40px auto;
-  background-color: hsla(30, 72%, 54%, 0.025);
-  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2), 0px -1px 5px rgba(0, 0, 0, 0.01);
-}
-
-label{
-  font-weight: bold;
-}
-
-input, label {
-  display: block;
-  height: 3.5vh;
-}
-
-input:focus{
-  border: 4px solid rgba(255, 20, 145, 0.534);
-  box-shadow: 0px 3px 5px 3px rgba(190, 17, 106, 0.2), 0px -1px 5px rgba(0, 0, 0, 0.01);
+  height: 100vh;
 }
 
 .cover_image {
-  position: relative;
-  width: min(500px, 100%);
-  overflow: hidden; /* Ensure the image doesn't exceed the container */
+  position: relative; /* Ensure the image doesn't exceed the container */
+  overflow: hidden;
+  width: 30%;
+  min-width: 400px;
+  height: 100%;
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2),
+    0px -1px 5px rgba(0, 0, 0, 0.01);
 }
 
 .back-img {
-  width: auto; /* Make the image fill the container */
-  height: 100vh; /* Maintain aspect ratio */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2),
+    0px -1px 5px rgba(0, 0, 0, 0.01);
 }
 
 .wall {
@@ -79,33 +52,117 @@ input:focus{
 }
 
 .over-img {
-  height: 125px
+  height: 125px;
 }
 
-.submit_section{
-  padding-left: 20px;
+.form_section {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  height: 100%;
 }
 
-button{
-display: inline-block;
-outline: none;
-cursor: pointer;
-font-size: 16px;
-line-height: 20px;
-font-weight: 600;
-border-radius: 8px;
-padding: 14px 24px;
-border: none;
-margin-bottom: 20px;
-transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
-color: #fff;
+.header {
+  padding: 5%;
+  font-weight: bold;
 }
 
-button:hover{
-  background: linear-gradient(to right, rgb(230, 30, 203) 0%, rgb(227, 28, 187) 50%, rgb(194, 4, 215) 100%);
+.input_section {
+  flex: 1;
+  display: flex;
 }
 
-a{
+form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 5%;
+  height: 100%;
+  width: 100%;
+  gap: 5%;
+  background-color: hsla(30, 72%, 54%, 0.025);
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2),
+    0px -1px 5px rgba(0, 0, 0, 0.01);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  display: block;
+  height: 4.5vh;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 3px solid rgba(255, 20, 145, 0.479);
+  outline: none;
+  zoom: 1.025;
+  box-shadow: 0px 3px 5px 3px rgba(190, 17, 106, 0.2),
+    0px -1px 5px rgba(0, 0, 0, 0.01);
+}
+
+.submit_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: auto;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 24px;
+  border: none;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  );
+  color: #fff;
+}
+
+button:hover {
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 203) 0%,
+    rgb(227, 28, 187) 50%,
+    rgb(194, 4, 215) 100%
+  );
+}
+
+a {
   text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .Main_Container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cover_image {
+    width: 100%;
+    height: 300px;
+    min-width: auto;
+  }
+
+  .form_section {
+    width: 100%;
+  }
 }

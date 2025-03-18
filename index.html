@@ -7,103 +7,116 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- This is the image box -->
-    <div class="cover_image">
-      <img class="back-img" src="ice_berry.jpg" alt="frozen berries on tree" />
-      <div class="wall">
-        <img class="over-img" src="snowman_13496434.png" alt="a sparkles icons">
-        <div style="font-size: xx-large;">The Winter Book</div>
+    <div class="Main_Container">
+      <!-- This is the image box -->
+      <div class="cover_image">
+        <img
+          class="back-img"
+          src="ice_berry.jpg"
+          alt="frozen berries on tree"
+        />
+        <div class="wall">
+          <img
+            class="over-img"
+            src="snowman_13496434.png"
+            alt="a sparkles icons"
+          />
+          <div style="font-size: xx-large">The Winter Book</div>
+        </div>
+      </div>
+      <!-- This is the text and form box -->
+      <div class="form_section">
+        <div class="header">
+          <p>This is not a real online service!</p>
+          <br />
+          <p>
+            “Great things happen to those who don't stop believing, trying,
+            learning, and being grateful.” <br />
+            ― <em>Roy T. Bennett, The Light in the Heart</em> <br />Sign up now
+            to get started.
+          </p>
+          <br />
+          <p>You know you want to.</p>
+        </div>
+        <!-- Form input section -->
+        <div class="input_section">
+          <form id="Sign_In" action="Sign In" method="post">
+            <div>
+              <label for="first_name">First Name:</label>
+              <input
+                type="text"
+                id="first_name"
+                name="first_name"
+                placeholder="Ram..."
+                size="30"
+                required
+              />
+            </div>
+            <div>
+              <label for="last_name">Last Name:</label>
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                size="30"
+                placeholder="Lalla..."
+              />
+            </div>
+            <div>
+              <label for="e-mail_address">E-mail Address:</label>
+              <input
+                type="email"
+                id="e-mail_address"
+                name="e-mail_address"
+                size="30"
+                placeholder="abcd@yahoo.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone_number">Phone Number:</label>
+              <input
+                type="text"
+                id="number"
+                name="number"
+                size="30"
+                placeholder="12330...."
+                pattern="(\d{12}([\-]\d{10})?)"
+              />
+            </div>
+            <div>
+              <label for="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                size="30"
+                placeholder="**********"
+                required
+              />
+            </div>
+            <div>
+              <label for="confirm_password">Confirm Password:</label>
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                size="30"
+                placeholder="**********"
+                required
+              />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <!-- This is the text and form box -->
-    <div class="form_section">
-      <div class="header">
-        <p>This is not a real online service!</p>
-        <br>
-        <p>
-          “Great things happen to those who don't stop believing, trying,
-          learning, and being grateful.” <br />
-          ― <em>Roy T. Bennett, The Light in the Heart</em> <br />Sign up now to
-          get started.
-        </p>
-        <br>
-        <p>You know you want to.</p>
-      </div>
-      <!-- Form input section -->
-      <div class="input_section">
-        <form id="Sign_In" action="Sign In" method="post">
-          <div>
-            <label for="first_name">First Name:</label>
-            <input
-              type="text"
-              id="first_name"
-              name="first_name"
-              placeholder="Ram..."
-              size="45"
-              required
-            />
-          </div>
-          <div>
-            <label for="last_name">Last Name:</label>
-            <input
-              type="text"
-              name="last_name"
-              id="last_name"
-              size="45"
-              placeholder="Lalla..."
-            />
-          </div>
-          <div>
-            <label for="e-mail_address">E-mail Address:</label>
-            <input
-              type="email"
-              id="e-mail_address"
-              name="e-mail_address"
-              size="45"
-              placeholder="abcd@yahoo.com"
-              required
-            />
-          </div>
-          <div>
-            <label for="phone_number">Phone Number:</label>
-            <input
-              type="text"
-              id="number"
-              name="number"
-              size="45"
-              placeholder="12345...."
-              pattern="(\d{12}([\-]\d{10})?)"
-            />
-          </div>
-          <div>
-            <label for="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              size="45"
-              placeholder="**********"
-              required
-            />
-          </div>
-          <div>
-            <label for="confirm_password">Confirm Password:</label>
-            <input
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
-              size="45"
-              placeholder="**********"
-              required
-            />
-          </div>
-        </form>
-      </div>
-      <!-- The submit section -->
-      <div class="submit_section" style="font-size: large;">
-        <button type="submit" form="Sign_In">Create Account</button>
-        <p>Already have an account? <a href=""><strong style="color:rgb(215, 4, 102)">Log in</strong></a></p>
-      </div>
+    <!-- The submit section -->
+    <div class="submit_section" style="font-size: large">
+      <button type="submit" form="Sign_In">Create Account</button>
+      <p>
+        Already have an account?
+        <a href=""><strong style="color: rgb(215, 4, 102)">Log in</strong></a>
+      </p>
     </div>
   </body>
 </html>
